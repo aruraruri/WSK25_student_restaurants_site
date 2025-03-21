@@ -12,7 +12,10 @@
         <div class="header">
             <div class="userinfo">
                 <img src="https://placecats.com/300/200" id="userimg" alt="User Image">
-                <div class="username">Username</div>
+                <div>
+                    <p class="username">Not logged in!</p>
+                    <a class="profilelink" href="profile.html">Profile</a>
+                </div>
             </div>
             <div class="navbar">
                 <button class="navbarbutton">Login</button>
@@ -22,10 +25,116 @@
         </div>
         <div class="body">
             <div class="restaurantslistheader">
-                <h2 class="h2">Restaurants:</h2> 
+                <h2 class="h2">Restaurants</h2>
+                <p class="switchoptions">Show Daily/Weekly Menu</p>
+                <!-- Rectangular switch -->
+                <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+                </label>
+                <p class="switchoptions">Filter by City</p>
+                <!-- Surround the select box within a "custom-select" DIV element.
+                Remember to set the width: -->
+                <div class="custom-select" >
+                    <select>
+                      <option value="0">Select city:</option>
+                      <option value="1">Helsinki</option>
+                      <option value="2">Espoo</option>
+                      <option value="3">Vantaa</option>
+                      <option value="4">Lahti</option>
+                      <option value="5">Tuusula</option>
+                      <option value="6">Vihti</option>
+                      <option value="7">Pirkkola</option>
+                    </select>
+                </div>
             </div>
-            <div class="restaurantslist">
-
+            <div class="restaurantslistcontainer">
+                <div class="accordion">
+                    <details>
+                      <summary>Cafe Metka Myllypuro</summary>
+                      <p>date	"maanantai 24. maaliskuuta"
+                        courses	
+                        0	
+                        name	"Jauhelihalasagnette"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        1	
+                        name	"Broilerkebabia tomaattikastikkeessa ja riisiä"
+                        price	"2,95 € / 9,80 €"
+                        diets	"G, M"
+                        2	
+                        name	"Lihapullia (8KPL), sipulikastiketta ja perunaa"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        3	
+                        name	"Tonnikalapatonki"
+                        price	"2,95 € / 5,70 €"
+                        diets	"M"</p>
+                    </details>
+                    <details>
+                      <summary>Myllypuron Kampuksen Lounasravintola</summary>
+                      <p>date	"maanantai 24. maaliskuuta"
+                        courses	
+                        0	
+                        name	"Jauhelihalasagnette"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        1	
+                        name	"Broilerkebabia tomaattikastikkeessa ja riisiä"
+                        price	"2,95 € / 9,80 €"
+                        diets	"G, M"
+                        2	
+                        name	"Lihapullia (8KPL), sipulikastiketta ja perunaa"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        3	
+                        name	"Tonnikalapatonki"
+                        price	"2,95 € / 5,70 €"
+                        diets	"M"</p>
+                    </details>
+                    <details>
+                      <summary>Dreams Cafe Karamalmi</summary>
+                      <p>date	"maanantai 24. maaliskuuta"
+                        courses	
+                        0	
+                        name	"Jauhelihalasagnette"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        1	
+                        name	"Broilerkebabia tomaattikastikkeessa ja riisiä"
+                        price	"2,95 € / 9,80 €"
+                        diets	"G, M"
+                        2	
+                        name	"Lihapullia (8KPL), sipulikastiketta ja perunaa"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        3	
+                        name	"Tonnikalapatonki"
+                        price	"2,95 € / 5,70 €"
+                        diets	"M"</p>
+                    </details>
+                    <details>
+                      <summary>Compass Group</summary>
+                      <p>date	"maanantai 24. maaliskuuta"
+                        courses	
+                        0	
+                        name	"Jauhelihalasagnette"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        1	
+                        name	"Broilerkebabia tomaattikastikkeessa ja riisiä"
+                        price	"2,95 € / 9,80 €"
+                        diets	"G, M"
+                        2	
+                        name	"Lihapullia (8KPL), sipulikastiketta ja perunaa"
+                        price	"2,95 € / 9,80 €"
+                        diets	"L"
+                        3	
+                        name	"Tonnikalapatonki"
+                        price	"2,95 € / 5,70 €"
+                        diets	"M"</p>
+                    </details>
+                </div>
             </div>
         </div>
     </div>
