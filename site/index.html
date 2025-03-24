@@ -24,30 +24,33 @@
             </div>
         </div>
         <div class="body">
-            <div class="restaurantslistheader">
-                <h2 class="h2">Restaurants</h2>
-                <p class="switchoptions">Show Daily/Weekly Menu</p>
-                <!-- Rectangular switch -->
-                <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-                </label>
-                <p class="switchoptions">Filter by City</p>
-                <!-- Surround the select box within a "custom-select" DIV element.
-                Remember to set the width: -->
-                <div class="custom-select" >
-                    <select>
-                      <option value="0">No filter</option>
-                      <option value="1">Helsinki</option>
-                      <option value="2">Espoo</option>
-                      <option value="3">Vantaa</option>
-                      <option value="4">Lahti</option>
-                      <option value="5">Tuusula</option>
-                      <option value="6">Vihti</option>
-                      <option value="7">Pirkkola</option>
-                    </select>
+            <header>
+                <div class="restaurantslistheader">
+                    <h2 class="h2">Restaurants</h2>
+                    <p class="switchoptions">Show Daily/Weekly Menu</p>
+                    <!-- Rectangular switch -->
+                    <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                    </label>
+                    <p class="switchoptions">Filter by City</p>
+                    <!-- Surround the select box within a "custom-select" DIV element.
+                    Remember to set the width: -->
+                    <div class="custom-select" >
+                        <select>
+                        <option value="0">No filter</option>
+                        <option value="1">Helsinki</option>
+                        <option value="2">Espoo</option>
+                        <option value="3">Vantaa</option>
+                        <option value="4">Lahti</option>
+                        <option value="5">Tuusula</option>
+                        <option value="6">Vihti</option>
+                        <option value="7">Pirkkola</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
+            </header>
+            <main>
             <div class="restaurantslistcontainer">
                 <div class="accordion">
                     <details>
@@ -136,6 +139,7 @@
                     </details>
                 </div>
             </div>
+            </main>
         </div>
     </div>
 </body>
