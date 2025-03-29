@@ -8,4 +8,3 @@ async function main() {
 }
 
 main();
-console.log("CODE STILL WORKS");
