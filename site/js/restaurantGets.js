@@ -19,12 +19,14 @@ export async function getRestaurants() {
 
 export async function getDailyMenu(restaurantId) {
   const data = await fetchData(dailyMenuUrl + restaurantId + "/fi");
+  console.log(dailyMenuUrl + restaurantId + "/fi");
   console.log(data);
   return data;
 }
 
 export async function getWeeklyMenu(restaurantId) {
-  const data = await fetchData(dailyMenuUrl + restaurantId + "/fi");
+  const data = await fetchData(weeklyMenuUrl + restaurantId + "/fi");
+  console.log(weeklyMenuUrl + restaurantId + "/fi");
   console.log(data);
   return data;
 }
