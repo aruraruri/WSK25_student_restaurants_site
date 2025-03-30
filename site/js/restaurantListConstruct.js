@@ -9,12 +9,16 @@ import {
 const accordion = document.querySelector(".accordion");
 
 const dailyWeeklySwitch = document.querySelector("input[type='checkbox']");
-dailyWeeklySwitch.addEventListener("click", () => {
+dailyWeeklySwitch.addEventListener("click", () => closeDetails());
+
+// reusable close details for different event listeners
+function closeDetails() {
   const allDetails = document.querySelectorAll("details");
   for (let detail of allDetails) {
     detail.open = false;
+    console.log("closing details");
   }
-});
+}
 
 export function constructRestaurantList(restaurants) {
   for (let restaurant of restaurants) {
