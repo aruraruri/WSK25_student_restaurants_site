@@ -51,6 +51,7 @@ export function constructRestaurantList(restaurants) {
             foodListDiv
           );
         }
+        constructRestaurantInfo(restaurant, restaurantDetailsDiv);
       }
     });
 
@@ -100,4 +101,18 @@ function constructWeeklyMenuList(menu, appendToElem) {
     }
     appendToElem.appendChild(ul);
   }
+}
+
+function constructRestaurantInfo(restaurant, appendToElem) {
+  const pAddress = document.createElement("p");
+  pAddress.innerText = restaurant.address ? restaurant.address : "";
+  const pCity = document.createElement("p");
+  pCity.innerText = restaurant.city ? restaurant.city : "";
+  const pPostal = document.createElement("p");
+  pPostal.innerText = restaurant.postal ? restaurant.postal : "";
+  const pPhone = document.createElement("p");
+  pPhone.innerText = restaurant.phone ? restaurant.phone : "";
+  console.log(restaurant);
+
+  appendToElem.append(pAddress, pCity, pPostal, pPhone);
 }
