@@ -29,6 +29,7 @@ export function constructRestaurantList(restaurants) {
   accordion.innerHTML = "";
 
   for (let restaurant of restaurants) {
+    // start by reading filter variable, render only matching city restaurants or all if filter value == -1
     const filter = cityFilter.value;
     if (filter == restaurant.city || filter == -1) {
       const details = document.createElement("details");
