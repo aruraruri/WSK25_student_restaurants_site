@@ -1,10 +1,15 @@
 "use strict";
 
 import { getRestaurants } from "./restaurantGets.js";
-import { constructRestaurantList } from "./restaurantListConstruct.js";
+import {
+  constructRestaurantList,
+  populateCityFilter,
+} from "./restaurantListConstruct.js";
 
 async function main() {
-  constructRestaurantList(await getRestaurants());
+  const restaurants = await getRestaurants();
+  constructRestaurantList(restaurants);
+  populateCityFilter(restaurants);
 }
 
 main();

@@ -11,6 +11,8 @@ const accordion = document.querySelector(".accordion");
 const dailyWeeklySwitch = document.querySelector("input[type='checkbox']");
 dailyWeeklySwitch.addEventListener("click", () => closeDetails());
 
+const cityFilter = document.querySelector(".custom-select > select");
+
 // reusable close details for different event listeners
 function closeDetails() {
   const allDetails = document.querySelectorAll("details");
@@ -119,4 +121,28 @@ function constructRestaurantInfo(restaurant, appendToElem) {
   console.log(restaurant);
 
   appendToElem.append(pAddress, pCity, pPostal, pPhone);
+}
+
+export function populateCityFilter(restaurants) {
+  // builds city filter list inside the custom-select element
+  let cityList = [];
+  restaurants.forEach((restaurant) => {
+    if (!cityList.includes(restaurant.city)) {
+      cityList.push(restaurant.city);
+    }
+  });
+
+  for (let i = 0; i < cityList.length; i++) {
+    const selectOption = document.createElement("option");
+    selectOption.value = cityList[i];
+    selectOption.innerText = cityList[i];
+    cityFilter.appendChild(selectOption);
+  }
+
+  // add click option to collapse details
+  const cityFilterOptions = document.querySelectorAll("option");
+  for (let option of cityFilterOptions) {
+    option.addEventListener("click", () => closeDetails());
+    console.log(option);
+  }
 }
