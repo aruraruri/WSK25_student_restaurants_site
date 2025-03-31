@@ -6,7 +6,7 @@ import {
   populateCityFilter,
 } from "./restaurantListConstruct.js";
 
-async function main() {
+export async function main() {
   const restaurants = await getRestaurants();
   constructRestaurantList(restaurants);
   populateCityFilter(restaurants);
