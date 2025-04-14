@@ -21,9 +21,13 @@ form.addEventListener("submit", async (event) => {
     }
   );
 
+  const data = await response.json();
+
   if (response.ok) {
     console.log("Login successful!");
     // Optionally redirect or show a success message
+    console.log("token", data.token);
+    localStorage.setItem("token", data.token);
   } else {
     console.error("Login failed.");
     // Optionally show an error message
