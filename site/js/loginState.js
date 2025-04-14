@@ -22,8 +22,13 @@ export async function checkLoginState() {
 
     const navbar = document.querySelector(".navbar");
 
+    if (navbar.querySelector("#logout")) {
+      return; // Prevent adding multiple buttons if already present
+    }
+
     const logoutButton = document.createElement("a");
     logoutButton.innerText = "Logout";
+    logoutButton.id = "logout";
     logoutButton.classList.add("navbarbutton");
     navbar.appendChild(logoutButton);
     logoutButton.addEventListener("click", async () => {
