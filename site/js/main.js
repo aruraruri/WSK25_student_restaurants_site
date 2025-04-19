@@ -7,12 +7,13 @@ import {
   populateCityFilter,
 } from "./restaurantListConstruct.js";
 
-export async function main() {
+async function main() {
   await checkLoginState();
-
   const restaurants = await getRestaurants();
   constructRestaurantList(restaurants);
   populateCityFilter(restaurants);
 }
 
 main();
+
+export { main };

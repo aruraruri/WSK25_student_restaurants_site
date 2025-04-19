@@ -7,6 +7,7 @@ export async function checkLoginState() {
 
   // Get token from localStorage
   const token = localStorage.getItem("token");
+  console.log("token", token);
 
   if (!token) {
     username.innerText = "Not logged in.";

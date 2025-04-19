@@ -149,12 +149,8 @@ export function populateCityFilter(restaurants) {
   }
 
   // add click option to collapse details
-  const cityFilterOptions = document.querySelectorAll("option");
-  for (let option of cityFilterOptions) {
-    option.addEventListener("click", () => {
-      closeDetails();
-      main();
-    });
-    console.log(option);
-  }
+  cityFilter.addEventListener("change", () => {
+    closeDetails();
+    main();
+  });
 }

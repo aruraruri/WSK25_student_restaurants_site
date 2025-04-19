@@ -24,10 +24,9 @@ form.addEventListener("submit", async (event) => {
   const data = await response.json();
 
   if (response.ok) {
-    console.log("Login successful!");
-    // Optionally redirect or show a success message
-    console.log("token", data.token);
     localStorage.setItem("token", data.token);
+    console.log("Login successful!");
+    console.log("token", data.token);
     window.location.href = "index.html"; // Redirect to the main page after login
   } else {
     alert("Login failed. Please check your credentials.");
