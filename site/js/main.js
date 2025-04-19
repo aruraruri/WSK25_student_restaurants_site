@@ -8,7 +8,7 @@ import {
 } from "./restaurantListConstruct.js";
 
 export async function main() {
-  checkLoginState();
+  await checkLoginState();
 
   const restaurants = await getRestaurants();
   constructRestaurantList(restaurants);

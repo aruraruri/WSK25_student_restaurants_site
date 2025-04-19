@@ -27,7 +27,8 @@ form.addEventListener("submit", async (event) => {
 
   if (response.ok) {
     console.log("Registration successful!");
-    // Optionally redirect or show a success message
+    // redirect to login
+    window.location.href = "login.html"; // Redirect to the login page after registration
   } else {
     console.error("Registration failed.");
     // Optionally show an error message
