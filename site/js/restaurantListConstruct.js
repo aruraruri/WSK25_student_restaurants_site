@@ -15,6 +15,8 @@ dailyWeeklySwitch.addEventListener("click", () => closeDetails());
 
 const cityFilter = document.querySelector(".custom-select > select");
 
+const cityList = [];
+
 // reusable close details for different event listeners
 function closeDetails() {
   const allDetails = document.querySelectorAll("details");
@@ -136,19 +138,42 @@ export function populateCityFilter(restaurants) {
   // builds city filter list inside the custom-select element
   let cityList = [];
   restaurants.forEach((restaurant) => {
-    if (!cityList.includes(restaurant.city)) {
+    if (!cityList.includes(restaurant.city) && restaurant.city) {
       cityList.push(restaurant.city);
     }
   });
 
-  for (let i = 0; i < cityList.length; i++) {
+  // sort cities alphabetically
+  cityList.sort();
+
+  // store the currently selected value before clearing
+  const currentSelection = cityFilter.value;
+
+  // clear existing options
+  cityFilter.innerHTML = "";
+
+  // add default option
+  const defaultOption = document.createElement("option");
+  defaultOption.value = "-1";
+  defaultOption.textContent = "All Cities";
+  cityFilter.appendChild(defaultOption);
+
+  // add city options
+  cityList.forEach((city) => {
     const selectOption = document.createElement("option");
-    selectOption.value = cityList[i];
-    selectOption.innerText = cityList[i];
+    selectOption.value = city;
+    selectOption.textContent = city;
     cityFilter.appendChild(selectOption);
+  });
+
+  // restore previous selection
+  if (cityList.includes(currentSelection)) {
+    cityFilter.value = currentSelection;
+  } else {
+    cityFilter.value = "-1"; // default
   }
 
-  // add click option to collapse details
+  // listener for the select element
   cityFilter.addEventListener("change", () => {
     closeDetails();
     main();
